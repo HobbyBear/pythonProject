@@ -72,15 +72,16 @@ def saveToRegister():
         if readSize <= i:
             if readSize == i:
                 register[index] = B
-            j = index-1
-            print(index)
+                print(index, register[index])
+            j = index - 1
             while j >= 0:
                 if register[j] == 0:
-                    print(j)
                     register[j] = B
+                    print(j, register[j])
                     j += -1
                 else:
                     break
+            break
         index += 1
 
 
@@ -151,7 +152,7 @@ def register_hex_digest():
 
 
 # cced11f7bbbffea2f718903216643648
-mess = str.encode("2a")
+mess = str.encode("123456ggggggggggggggggggggggggggggggggggggggghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
 init_mess(mess)
 print(hex_digest())
 # 01234567b88694cffedcba98003484fd
